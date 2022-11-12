@@ -1,0 +1,69 @@
+.heroCard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207, 235, 152);
+    position: relative;
+
+    img {
+        scale: 1;
+        transform-origin: left;
+        transform: rotate(-25deg) translateY(90px) translateX(-95px);
+        transition: scale 0.7s ease;
+    }
+
+    .nameItem, .price {
+        font-weight: 300;
+        position: absolute;
+        // font-family: 'Concert One', cursive;
+    }
+
+    .nameItem {
+        bottom: 100px;
+        right: 100px;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: all 0.7s ease;
+        color: rgb(88, 97, 69);
+    }
+
+    .price {
+        top: 60px;
+        left: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        transform: scale(0);
+        transform-origin: center;
+        color: white;
+        font-weight: 100;
+        background-color: rgba(66, 61, 61, 0.178);
+        font-family: 'Concert One', cursive;
+        transition: all 0.5s cubic-bezier(.57,1.74,.61,.8);
+
+    }
+
+    &:hover {
+
+        cursor: pointer;
+
+        img {
+            scale: 1.025;
+        }
+
+        .price {
+            transform: scale(1);
+        }
+
+        .nameItem {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
