@@ -13,7 +13,7 @@ export default function index(props) {
 
     const navBarClassName = toggleNavBar ? `${styles.navbar} ${styles.displayNavBar}` : `${styles.navbar}`;
     const headerClassName = displayHeader ? `${styles.header} ${styles.displayHeader}` : `${styles.header}`;
-    const itemsNavBarClassName = hideItemsNavBar ? `${styles.itemsNavBar} ${styles.test}` : `${styles.itemsNavBar}`;
+    const itemsNavBar = hideItemsNavBar ? `${styles.itemsNavBar} ${styles.test}` : `${styles.itemsNavBar}`;
 
     const handleToggleNavBar = () => {
         setToggleNavBar(!toggleNavBar);
@@ -32,6 +32,7 @@ export default function index(props) {
             <nav className={navBarClassName}>
                 {
                     !toggleNavBar && (
+                        // TODO : make component
                         <>
                             <div className={styles.navBarNav}>
                                 <img src="icons/icon-store.svg" width="80" height="80" alt="" />
@@ -39,28 +40,42 @@ export default function index(props) {
                             <div className={styles.navBarNav} onClick={() => handleToggleNavBar()}>
                                 <img src="icons/hamburger-icon.svg" width="40" height="40" alt="" />
                             </div>
-                            <div className={styles.navBarNav}>bloc 3</div>
+                            <div className={styles.navBarNav}>
+                                <ul>
+                                    <li className={styles.socialIcon}>Twitter</li>
+                                    <li className={styles.socialIcon}>Facebook</li>
+                                    <li className={styles.socialIcon}>Instagram</li>
+                                </ul>
+                            </div>
                         </>
                     )
                 }
                 {
                     toggleNavBar && (
+                        // TODO : make component
                         <>
                             <div className={styles.itemsNavBarContainer}>
                                 <div className={styles.closeNavBtn} onClick={(e) => handleHideItems(e)}>
                                     <img src="icons/close-icon.svg" width="60" height="60" alt="" />
                                 </div>
-                                <div className={itemsNavBarClassName}>
+                                <div className={itemsNavBar}>
                                     <Link href="javascript:void(0)">Home</Link>
                                 </div>
-                                <div className={itemsNavBarClassName}>
+                                <div className={itemsNavBar}>
                                     <Link href="javascript:void(0)">Sneakers</Link>
                                 </div>
-                                <div className={itemsNavBarClassName}>
+                                <div className={itemsNavBar}>
                                     <Link href="javascript:void(0)">Accessories</Link>
                                 </div>
-                                <div className={itemsNavBarClassName}>
+                                <div className={itemsNavBar}>
                                     <Link href="javascript:void(0)">Contacts</Link>
+                                </div>
+                                <div className={styles.socialIconsContainer}>
+                                    <ul>
+                                        <li className={styles.socialIcon}>Twitter</li>
+                                        <li className={styles.socialIcon}>Facebook</li>
+                                        <li className={styles.socialIcon}>Instagram</li>
+                                    </ul>
                                 </div>
                             </div>
                         </>

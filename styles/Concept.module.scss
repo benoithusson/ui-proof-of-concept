@@ -30,6 +30,21 @@
         border-right: 1px solid rgba(0, 0, 0, 0.164);
         gap: 50px;
     }
+
+    .socialIcon {
+        list-style-type: none;
+        padding: 15px 5px;
+    }
+
+    .socialIcon:first-child {
+        background-color: aquamarine;
+    }
+    .socialIcon:nth-child(2) {
+        background-color: red;
+    }
+    .socialIcon:nth-child(3) {
+        background-color: green;
+    }
 }
 
 .closeNavBtn {
@@ -123,6 +138,30 @@
                 transform: translateY(-200px);
                 opacity: 0;
             }
+        }
+    }
+
+    .socialIconsContainer {
+        // background-color: aquamarine;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.164);
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .socialIcon {
+            // background-color: red;
+            list-style-type: none;
+            width: 100px;
+            background-color: aquamarine;
+
         }
     }
 }
