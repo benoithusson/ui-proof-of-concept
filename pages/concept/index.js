@@ -42,9 +42,16 @@ export default function index(props) {
                             </div>
                             <div className={styles.navBarNav}>
                                 <ul>
-                                    <li className={styles.socialIcon}>Twitter</li>
-                                    <li className={styles.socialIcon}>Facebook</li>
-                                    <li className={styles.socialIcon}>Instagram</li>
+                                    {/* TODO : make component */}
+                                    <li className={styles.socialIcon}>
+                                        <img src="icons/facebook.svg" width="20" height="20" alt="" />
+                                    </li>
+                                    <li className={styles.socialIcon}>
+                                        <img src="icons/instagram.svg" width="20" height="20" alt="" />
+                                    </li>
+                                    <li className={styles.socialIcon}>
+                                        <img src="icons/twitter.svg" width="20" height="20" alt="" />
+                                    </li>
                                 </ul>
                             </div>
                         </>
@@ -71,10 +78,17 @@ export default function index(props) {
                                     <Link href="javascript:void(0)">Contacts</Link>
                                 </div>
                                 <div className={styles.socialIconsContainer}>
+                                    {/* TODO : make component */}
                                     <ul>
-                                        <li className={styles.socialIcon}>Twitter</li>
-                                        <li className={styles.socialIcon}>Facebook</li>
-                                        <li className={styles.socialIcon}>Instagram</li>
+                                        <li className={styles.socialIcon}>
+                                            <img src="icons/facebook.svg" width="30" height="30" alt="" />
+                                        </li>
+                                        <li className={styles.socialIcon}>
+                                            <img src="icons/instagram.svg" width="30" height="30" alt="" />
+                                        </li>
+                                        <li className={styles.socialIcon}>
+                                            <img src="icons/twitter.svg" width="30" height="30" alt="" />
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
