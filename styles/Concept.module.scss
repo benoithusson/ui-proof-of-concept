@@ -16,7 +16,7 @@
     z-index: 1;
     height: 100vh;
     width: 5%;
-    transition: all 0.7s ease;
+    transition: all 0.5s ease;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.164);
         gap: 50px;
     }
 }
@@ -57,7 +58,7 @@
     text-align: center;
     opacity: 1;
     transition: all 0.7s ease;
-    animation: 0.7s forwards ease-in-out display-items-navbar;
+    animation: 0.4s forwards ease-in-out display-items-navbar;
 
     .itemsNavBar {
         // Define a defined height
@@ -73,41 +74,58 @@
             font-weight: 100;
             font-size: 50px;
             font-family: 'Yantramanav', sans-serif;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
 
             &:hover {
                 padding-left: 40px;
                 color: rgb(22, 22, 22);
             }
         }
+
+        &:nth-child(2) {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.3s ease;
+
+            &.test {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            transform-origin: center;
+            opacity: 1;
+            transition: all 0.35s ease;
+
+            &.test {
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(4) {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.3s ease;
+
+            &.test {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(5) {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.3s ease;
+
+            &.test {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+        }
     }
 }
-
-.itemsNavBar:nth-child(1) {
-    background-color: green;
-    transform: translateY(0);
-    transition: all 0.7s ease;
-    &.test {
-        transform: translateY(100px);
-    }
-}
-    // &.itemsNavBar:nth-child(3) {
-    //     background-color: orange;
-    //     transform: translateY(0);
-    //     transition: all 0.7s ease;
-    //     &:hover {
-    //         transform: translateY(-100px);
-    //     }
-    // }
-
-    // &.itemsNavBar:nth-child(4) {
-    //     background-color: skyblue;
-    //     transform: translateY(0);
-    //     transition: all 0.7s ease;
-    //     &:hover {
-    //         transform: translateY(-200px);
-    //     }
-    // }
 
 @keyframes display-items-navbar {
     from {

@@ -7,59 +7,47 @@ import Link from 'next/link';
 export default function index(props) {
 
     // https://stackoverflow.com/questions/66992178/how-can-i-toggle-a-class-and-change-the-css-in-nextjs
-    const [displayNavBar, setDisplayNavBar] = useState(false);
+    const [toggleNavBar, setToggleNavBar] = useState(false);
     const [displayHeader, setDisplayHeader] = useState(false);
     const [hideItemsNavBar, setHideItemsNavBar] = useState(false);
 
-    // If displayNavBar is TRUE > we want to display navBar > add the following classes to display navBar
-    const navBarClassName = displayNavBar ? `${styles.navbar} ${styles.displayNavBar}` : `${styles.navbar}`;
-    // If headerClassName is TRUE > we want to display header > add the following classes to display header
+    const navBarClassName = toggleNavBar ? `${styles.navbar} ${styles.displayNavBar}` : `${styles.navbar}`;
     const headerClassName = displayHeader ? `${styles.header} ${styles.displayHeader}` : `${styles.header}`;
-    // If hideItemsNavBar is TRUE > we want to hide navBar items > add the following classes to hide items
     const itemsNavBarClassName = hideItemsNavBar ? `${styles.itemsNavBar} ${styles.test}` : `${styles.itemsNavBar}`;
 
-    // PROBLEM
-    // Make the animation to hide items and THEN hide the navBar
-
-    // When I click on close, I want :
-    // To make the animation for items so that they disappear
-    // Then close the navBar
-
-    const handleNavBar = () => {
-        setDisplayNavBar(true);
+    const handleToggleNavBar = () => {
+        setToggleNavBar(!toggleNavBar);
+        setHideItemsNavBar(false);
     }
 
     const handleHideItems = (e) => {
-        setHideItemsNavBar(!itemsNavBarClassName);
-        if (e) {
-            setTimeout(() => {
-                setDisplayNavBar(!displayNavBar);
-                // classList ?
-            }, 1000);
-        }
+        setHideItemsNavBar(!hideItemsNavBar);
+        setTimeout(() => {
+            setToggleNavBar(!toggleNavBar);
+        }, 380)
     }
 
     return (
         <div className={styles.container}>
             <nav className={navBarClassName}>
                 {
-                    !displayNavBar && (
+                    !toggleNavBar && (
                         <>
-                            <div className={styles.navBarNav}>bloc 1</div>
-                            <div className={styles.navBarNav} onClick={() => handleNavBar()}
-                            >bloc 2</div>
+                            <div className={styles.navBarNav}>
+                                <img src="icons/icon-store.svg" width="80" height="80" alt="" />
+                            </div>
+                            <div className={styles.navBarNav} onClick={() => handleToggleNavBar()}>
+                                <img src="icons/hamburger-icon.svg" width="40" height="40" alt="" />
+                            </div>
                             <div className={styles.navBarNav}>bloc 3</div>
                         </>
                     )
                 }
                 {
-                    displayNavBar && (
+                    toggleNavBar && (
                         <>
                             <div className={styles.itemsNavBarContainer}>
-                                <div className={styles.closeNavBtn} onClick={(e) => {
-                                    handleNavBar();
-                                    handleHideItems(e);
-                                }}>
+                                <div className={styles.closeNavBtn} onClick={(e) => handleHideItems(e)}>
                                     <img src="icons/close-icon.svg" width="60" height="60" alt="" />
                                 </div>
                                 <div className={itemsNavBarClassName}>
