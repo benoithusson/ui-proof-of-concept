@@ -96,10 +96,15 @@ export default function index(props) {
                     )
                 }
             </nav>
+            {/* TODO : Make component */}
             <header className={headerClassName} onClick={() => setDisplayHeader(!displayHeader)}>
-                <div className={styles.headerNav}>bloc 1</div>
-                <div className={styles.headerNav}>bloc 2</div>
-                <div className={styles.headerNav}>bloc 3</div>
+                <div className={styles.headerNav}>
+                    <img src="icons/profil.svg" width="30" height="30" alt="" />
+                </div>
+                <div className={styles.headerNav}>
+                    <img src="icons/cart.svg" width="30" height="30" alt="" />
+                </div>
+                <div className={styles.headerNav}></div>
             </header>
             <section className={styles.heroSection}>
                 <HeroCard srcImage="/hero-shoes.png" altImage="new shoes nike air force one" price="150" nameItem="Nike Air Force one" />
