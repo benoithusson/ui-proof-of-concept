@@ -69,7 +69,7 @@ export default function Home(props) {
                   <Link href="javascript:void(0)">Home</Link>
                 </div>
                 <div className={itemsNavBar}>
-                  <Link href="javascript:void(0)">Sneakers</Link>
+                  <Link href="/sneakers">Sneakers</Link>
                 </div>
                 <div className={itemsNavBar}>
                   <Link href="javascript:void(0)">Accessories</Link>
