@@ -4,7 +4,7 @@ import Card from '../components/card/Card';
 import HeroCard from '../components/hero-card/HeroCard';
 import Link from 'next/link';
 
-export default function index(props) {
+export default function Home(props) {
 
   // https://stackoverflow.com/questions/66992178/how-can-i-toggle-a-class-and-change-the-css-in-nextjs
   const [toggleNavBar, setToggleNavBar] = useState(false);
