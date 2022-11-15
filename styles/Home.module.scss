@@ -1,4 +1,236 @@
+@import '../styles/abstracts/mixins';
+
 .container {
-    background-color: orange;
+    display: flex;
+    position: relative;
+    height: auto;
+}
+
+/* NAVBAR */
+// Refactoring
+// Same as .header
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     height: 100vh;
+    width: 5%;
+    transition: all 0.5s ease;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &.displayNavBar {
+        width: 55%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.164);
+        gap: 50px;
+    }
+
+    .socialIcon {
+        list-style-type: none;
+        padding: 15px 5px;
+    }
+
+    // .socialIcon:first-child {
+    //     // background-color: aquamarine;
+    // }
+    // .socialIcon:nth-child(2) {
+    //     // background-color: red;
+    // }
+    // .socialIcon:nth-child(3) {
+    //     // background-color: green;
+    // }
+}
+
+.closeNavBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px;
+    width: 100%;
+    text-align: right;
+
+    img {
+        transform: scale(1);
+        transition: all 0.4s ease;
+    }
+
+    &:hover {
+        cursor: pointer;
+        img {
+            transform: scale(1.25);
+        }
+    }
+}
+
+.itemsNavBarContainer {
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    transition: all 0.7s ease;
+    animation: 0.4s forwards ease-in-out display-items-navbar;
+
+    .itemsNavBar {
+        // Define a defined height
+        // So that it is easier to use translateX animation
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            // color: rgb(82, 82, 82);
+            color: black;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 50px;
+            font-family: 'Yantramanav', sans-serif;
+            transition: all 0.3s ease;
+
+            &:hover {
+                padding-left: 40px;
+                // color: rgb(22, 22, 22);
+            }
+        }
+
+        &:nth-child(2) {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.3s ease;
+
+            &.test {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            transform-origin: center;
+            opacity: 1;
+            transition: all 0.35s ease;
+
+            &.test {
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(4) {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.3s ease;
+
+            &.test {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(5) {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.3s ease;
+
+            &.test {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+        }
+    }
+
+    .socialIconsContainer {
+        // background-color: aquamarine;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 50px;
+        // border-top: 1px solid rgba(0, 0, 0, 0.164);
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .socialIcon {
+            list-style-type: none;
+            width: 100px;
+        }
+    }
+}
+
+@keyframes display-items-navbar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 5%;
+    z-index: 1;
+    background-color: white;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &.displayHeader {
+        width: 45%;
+    }
+}
+
+.headerNav,
+.navBarNav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    &:last-child {
+        align-items: flex-end;
+        padding-bottom: 30px;
+        color: black;
+    }
+}
+
+/* SECTIONS */
+.heroSection {
+    position: fixed;
+    left: 5%;
+    width: 50%;
+    height: 100vh;
+    z-index: 0;
+    background-color: brown;
+}
+
+.section {
+    position: absolute;
+    right: 5%;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 40%;
+    height: 100vh;
+    z-index: 0;
+    background-color: green;
 }
