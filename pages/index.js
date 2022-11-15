@@ -60,13 +60,10 @@ export default function Home(props) {
                 </div>
                 {/* TODO : make a component for items into NavBar */}
                 <div className={itemsNavBar}>
-                  <Link href="javascript:void(0)">Home</Link>
+                  <Link href="/">Home</Link>
                 </div>
                 <div className={itemsNavBar}>
                   <Link href="/sneakers">Sneakers</Link>
-                </div>
-                <div className={itemsNavBar}>
-                  <Link href="javascript:void(0)">Accessories</Link>
                 </div>
                 <div className={itemsNavBar}>
                   <Link href="javascript:void(0)">Contacts</Link>
@@ -105,8 +102,8 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps() {
-  const data = await import('./api/data.json');
+export async function getStaticProps() {
+  const data = await import('./api/data_home.json');
   const arrayItems = data.shoes;
 
   return {
