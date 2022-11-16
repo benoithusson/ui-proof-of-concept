@@ -1,83 +1,20 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
+import SocialIcons from '../components/social-icon/SocialIcon';
 import styles from '../styles/Home.module.scss';
 import Card from '../components/card/Card';
 import HeroCard from '../components/hero-card/HeroCard';
-import SocialIcons from '../components/social-icon/SocialIcon';
+import NavBar from '../components/navbar/NavBar';
 
 export default function Home(props) {
 
   // https://stackoverflow.com/questions/66992178/how-can-i-toggle-a-class-and-change-the-css-in-nextjs
-  const [toggleNavBar, setToggleNavBar] = useState(false);
   const [displayHeader, setDisplayHeader] = useState(false);
-  const [hideItemsNavBar, setHideItemsNavBar] = useState(false);
-
-  const navBarClassName = toggleNavBar ? `${styles.navbar} ${styles.displayNavBar}` : `${styles.navbar}`;
   const headerClassName = displayHeader ? `${styles.header} ${styles.displayHeader}` : `${styles.header}`;
-  const itemsNavBar = hideItemsNavBar ? `${styles.itemsNavBar} ${styles.hideItemsNavBar}` : `${styles.itemsNavBar}`;
-
-  const handleToggleNavBar = () => {
-    setToggleNavBar(!toggleNavBar);
-    setHideItemsNavBar(false);
-  }
-
-  const handleHideItems = (e) => {
-    setHideItemsNavBar(!hideItemsNavBar);
-    setTimeout(() => {
-      setToggleNavBar(!toggleNavBar);
-    }, 380)
-  }
 
   return (
     <div className={styles.container}>
-      <nav className={navBarClassName}>
-        {
-          !toggleNavBar && (
-            // TODO : make a component for NavBar
-            <>
-              <div className={styles.navBarNav}>
-                <img src="icons/icon-store.svg" width="60" height="60" alt="" />
-              </div>
-              <div className={styles.navBarNav} onClick={() => handleToggleNavBar()}>
-                <img src="icons/hamburger-icon.svg" width="30" height="30" alt="" />
-              </div>
-              <div className={styles.navBarNav}>
-                <div className={styles.socialIconsContainer}>
-                  <SocialIcons srcImage="/facebook.svg" />
-                  <SocialIcons srcImage="/instagram.svg" />
-                  <SocialIcons srcImage="/twitter.svg" />
-                </div>
-              </div>
-            </>
-          )
-        }
-        {
-          toggleNavBar && (
-            <>
-              <div className={styles.itemsNavBarContainer}>
-                <div className={styles.closeNavBtn} onClick={(e) => handleHideItems(e)}>
-                  <img src="icons/close-icon.svg" width="60" height="60" alt="" />
-                </div>
-                {/* TODO : make a component for items into NavBar */}
-                <div className={itemsNavBar}>
-                  <Link href="/">Home</Link>
-                </div>
-                <div className={itemsNavBar}>
-                  <Link href="/sneakers">Sneakers</Link>
-                </div>
-                <div className={itemsNavBar}>
-                  <Link href="javascript:void(0)">Contacts</Link>
-                </div>
-                <div className={styles.socialIconsContainer}>
-                  <SocialIcons srcImage="/facebook.svg" />
-                  <SocialIcons srcImage="/instagram.svg" />
-                  <SocialIcons srcImage="/twitter.svg" />
-                </div>
-              </div>
-            </>
-          )
-        }
-      </nav>
+      <NavBar />
       {/* TODO : make a component for header */}
       <header className={headerClassName} onClick={() => setDisplayHeader(!displayHeader)}>
         <div className={styles.headerNav}>
