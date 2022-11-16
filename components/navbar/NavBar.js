@@ -3,7 +3,7 @@ import SocialIcons from '../social-icon/SocialIcon'
 import styles from './NavBar.module.scss';
 import Link from 'next/link';
 
-export default function NavBar(props) {
+export default function NavBar() {
 
     // https://stackoverflow.com/questions/66992178/how-can-i-toggle-a-class-and-change-the-css-in-nextjs
     const [toggleNavBar, setToggleNavBar] = useState(false);
