@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from '../styles/Home.module.scss';
-import Card from '../components/card/Card';
+import HomeCard from '../components/home-card/HomeCard';
 import HeroCard from '../components/hero-card/HeroCard';
 import NavBar from '../components/navbar/NavBar';
-import Header from '../components/header/Header';
+import Header from '../components/cart/Cart';
 
 export default function Home(props) {
 
@@ -17,7 +17,7 @@ export default function Home(props) {
       <section className={styles.section}>
         {props.arrayItems.map((item, index) => {
           return (
-            <Card srcImage={item.srcImage} altImage={item.altImage} price={item.price} nameItem={item.name} key={index} />
+            <HomeCard srcImage={item.srcImage} altImage={item.altImage} price={item.price} nameItem={item.name} key={index} />
           )
         })}
       </section>

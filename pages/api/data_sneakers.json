@@ -71,12 +71,6 @@
             "altImage": "Nike",
             "name": "Nike Air Max",
             "price": 150
-        },
-        {
-            "srcImage": "/shoes-15.png",
-            "altImage": "Nike",
-            "name": "Nike Air Max",
-            "price": 150
         }
     ]
   }

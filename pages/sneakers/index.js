@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../components/card/Card';
 import NavBar from '../../components/navbar/NavBar';
-import Header from '../../components/header/Header';
+import Header from '../../components/cart/Cart';
 import styles from '../../styles/SneakersPage.module.scss';
 
 export default function Sneakers(props) {

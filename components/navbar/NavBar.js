@@ -53,10 +53,10 @@ export default function NavBar() {
                                 <img src="icons/close-icon.svg" width="60" height="60" alt="" />
                             </div>
                             <div className={navBarItem}>
-                                <Link href="/">Home</Link>
+                                <Link href="javascript:void(0)">Home</Link>
                             </div>
                             <div className={navBarItem}>
-                                <Link href="/sneakers">Sneakers</Link>
+                                <Link href="javascript:void(0)">Sneakers</Link>
                             </div>
                             <div className={navBarItem}>
                                 <Link href="javascript:void(0)">Contacts</Link>
