@@ -4,73 +4,121 @@
             "srcImage": "/shoes-1.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-2.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-4.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-5.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-7.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-8.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-9.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-10.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-11.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         },
         {
             "srcImage": "/shoes-12.png",
             "altImage": "Nike",
             "name": "Nike Air Max",
-            "price": 150
-        },
-        {
-            "srcImage": "/shoes-13.png",
-            "altImage": "Nike",
-            "name": "Nike Air Max",
-            "price": 150
-        },
-        {
-            "srcImage": "/shoes-14.png",
-            "altImage": "Nike",
-            "name": "Nike Air Max",
-            "price": 150
+            "price": 150,
+            "availableSizes": [
+                42,
+                43,
+                44,
+                45
+            ]
         }
     ]
   }

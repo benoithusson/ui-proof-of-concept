@@ -11,7 +11,7 @@ export default function Cart() {
             <div className={styles.headerNav}>
                 <img src="icons/cart.svg" width="20" height="20" />
             </div>
-            <div className={styles.headerNav}></div>
+            {/* <div className={styles.headerNav}></div> */}
         </header>
     )
 }

@@ -11,7 +11,14 @@ export default function Sneakers(props) {
             <Header />
             {props.arrayItems.map((item, index) => {
                 return (
-                    <Card srcImage={item.srcImage} altImage={item.altImage} price={item.price} nameItem={item.name} key={index} />
+                    <Card
+                        srcImage={item.srcImage}
+                        altImage={item.altImage}
+                        price={item.price}
+                        nameItem={item.name}
+                        availableSizes={item.availableSizes}
+                        key={index}
+                    />
                 )
             })}
         </div>

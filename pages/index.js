@@ -17,7 +17,13 @@ export default function Home(props) {
       <section className={styles.section}>
         {props.arrayItems.map((item, index) => {
           return (
-            <HomeCard srcImage={item.srcImage} altImage={item.altImage} price={item.price} nameItem={item.name} key={index} />
+            <HomeCard
+              srcImage={item.srcImage}
+              altImage={item.altImage}
+              price={item.price}
+              nameItem={item.name}
+              key={index}
+            />
           )
         })}
       </section>
