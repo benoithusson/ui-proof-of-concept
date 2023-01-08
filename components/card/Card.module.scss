@@ -1,0 +1,43 @@
+
+.card {
+    width: 100%;
+}
+
+.cardImgContainer {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardNameContainer {
+    font-weight: 100;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card:nth-child(1n) {
+    background-color: rgb(222, 208, 239);
+    color: rgb(100, 82, 122);
+}
+
+.card:nth-child(2n) {
+    background-color: rgb(255, 217, 218);
+    color: rgb(129, 90, 92);
+}
+
+.card:nth-child(3n) {
+    background-color: rgb(247, 246, 249);
+    color: rgb(139, 139, 139);
+}
+
+.card:nth-child(4n) {
+    background-color: rgb(188, 230, 253);
+    color: rgb(86, 120, 138);
+}
+
+.card:nth-child(5n) {
+    background-color: rgb(255, 239, 187);
+    color: rgb(122, 113, 83);
+}

@@ -7,15 +7,16 @@ export default function Card(props) {
 
     return (
         <div className={styles.card}>
-            {price &&
-                <p className={styles.price}>{price}€</p>
+            { srcImage &&
+                <div className={styles.cardImgContainer}>
+                    {/* TODO : Refactoring using </Image> */}
+                    <img src={srcImage} width="400" alt={altImage} />
+                </div>
             }
-            {srcImage &&
-                // TODO : Refactoring using </Image>
-                <img src={srcImage} width="350" alt={altImage} />
-            }
-            {nameItem &&
-                <p className={styles.nameItem}>{nameItem}</p>
+            { nameItem &&
+                <div className={styles.cardNameContainer}>
+                    <p className={styles.nameItem}>{nameItem} {price}€</p>
+                </div>
             }
         </div>
     )
