@@ -1,8 +1,8 @@
 .sneakersPageContainer {
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
     justify-content: center;
-    height: auto;
-    // padding: 30px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-auto-rows: 425px;
+    gap: 1px;
 }

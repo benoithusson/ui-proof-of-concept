@@ -1,43 +1,89 @@
 
 .card {
     width: 100%;
+    cursor: pointer;
+    position: relative;
+    padding: 100px 0;
+
+    .firstContainer {
+        display: flex;
+
+        .imgContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            width: 25%;
+            min-height: 200px;
+        }
+    }
+
+    .secondContainer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+        width: 100%;
+
+        .infoItemContainer {
+            display: flex;
+            justify-content: center;
+            font-weight: 100;
+            transform: translateY(20px);
+            transition: all 0.7s ease;
+            opacity: 0;
+
+            .nameItem {
+                display: flex;
+                align-items: center;
+                padding: 0 10px;
+            }
+
+            // .price {
+            //     // background-color: salmon;
+            //     padding: 0 10px;
+            //     font-weight: 500;
+            //     font-size: 20px;
+            // }
+
+            .addToFavoritesCta {
+                border: none;
+                background-color: transparent;
+                padding: 0 20px;
+
+                .bookmarkSvg {
+                    fill: red;
+                }
+
+            }
+        }
+    }
+
+    &:hover {
+        .infoItemContainer {
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.7s ease;
+        }
+    }
 }
 
-.cardImgContainer {
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cardNameContainer {
-    font-weight: 100;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.card:nth-child(1n) {
-    background-color: rgb(222, 208, 239);
-    color: rgb(100, 82, 122);
-}
-
-.card:nth-child(2n) {
+.card:nth-child(3n) {
     background-color: rgb(255, 217, 218);
     color: rgb(129, 90, 92);
 }
 
-.card:nth-child(3n) {
+.card:nth-child(2n) {
     background-color: rgb(247, 246, 249);
     color: rgb(139, 139, 139);
 }
 
 .card:nth-child(4n) {
-    background-color: rgb(188, 230, 253);
+    background-color: rgba(188, 230, 253, 0.87);
     color: rgb(86, 120, 138);
 }
 
 .card:nth-child(5n) {
-    background-color: rgb(255, 239, 187);
+    background-color: rgba(255, 239, 187, 0.849);
     color: rgb(122, 113, 83);
 }

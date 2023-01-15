@@ -6,10 +6,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -18,10 +20,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -30,10 +34,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -42,10 +48,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -54,10 +62,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -66,10 +76,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -78,10 +90,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -90,10 +104,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -102,10 +118,12 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         },
         {
@@ -114,10 +132,40 @@
             "name": "Nike Air Max",
             "price": 150,
             "availableSizes": [
-                42,
-                43,
-                44,
-                45
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
+            ]
+        },
+        {
+            "srcImage": "/shoes-13.png",
+            "altImage": "Nike",
+            "name": "Nike Air Max",
+            "price": 150,
+            "availableSizes": [
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
+            ]
+        },
+        {
+            "srcImage": "/shoes-14.png",
+            "altImage": "Nike",
+            "name": "Nike Air Max",
+            "price": 150,
+            "availableSizes": [
+                {"size": 40},
+                {"size": 41},
+                {"size": 42},
+                {"size": 43},
+                {"size": 44},
+                {"size": 45}
             ]
         }
     ]

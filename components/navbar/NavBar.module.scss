@@ -2,28 +2,29 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     z-index: 1;
     height: 100vh;
     width: 5%;
     transition: all 0.5s ease;
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    border-right: 1px solid rgba(168, 168, 168, 0.644);
 
     &.displayNavBar {
-        width: 55%;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 50px;
+        width: 55%;
     }
 
     .navBarNav {
-        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
 
         &:first-child {
             align-items: flex-start;
@@ -61,18 +62,18 @@
 
 .navBarItemsContainer {
     width: 100%;
-    text-align: center;
     opacity: 1;
+    text-align: center;
     transition: all 0.7s ease;
     animation: 0.4s forwards ease-in-out display-items-navbar;
 
     .navbarItem {
-        // Define a defined height
-        // So that it is easier to use translateX animation
-        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
+        // Define a defined height
+        // So that it is easier to use translateX animation
+        height: 100px;
 
         a {
             // color: rgb(82, 82, 82);
