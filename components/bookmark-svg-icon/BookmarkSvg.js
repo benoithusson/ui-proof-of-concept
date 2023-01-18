@@ -3,12 +3,12 @@ import styles from './BookmarkSvg.module.scss'
 
 export default function BookmarkSvg(props) {
 
-    const { colorSvg, widthSvg, heightSvg } = props;
-    console.log(widthSvg);
-    console.log(heightSvg);
+    const { colorSvg, widthSvg, heightSvg, bookmarkIsDisplayed } = props;
+
+    const bookmark = bookmarkIsDisplayed ? `${styles.bookmark} ${styles.bookmarkDisplayed}` : `${styles.bookmark}`;
 
     return (
-        <div className={styles.bookmarkContainer}>
+        <div className={bookmark}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={widthSvg}
