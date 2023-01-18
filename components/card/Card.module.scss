@@ -4,16 +4,32 @@
     position: relative;
     padding: 100px 0;
 
-    .bookmarkContainer {
-        // width: 10%;
-        // padding: 20px;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
+    // Refactoring : Used several time in the code (on HeroCard and HomeCard)
+    .price {
         position: absolute;
-        top: 0;
-        right: 0;
-        // background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50px;
+        left: 50px;
+        width: 30px;
+        height: 30px;
+        padding: 30px;
+        border-radius: 50%;
+        background-color: rgba(66, 61, 61, 0.178);
+        transform: scale(0);
+        transform-origin: center;
+        font-family: 'Concert One', cursive;
+        letter-spacing: 1px;
+        color: white;
+        transition: all 0.5s cubic-bezier(.57,1.74,.61,.8);
+    }
+
+    // Refactoring : Used several time in the code (on HeroCard and HomeCard)
+    &:hover {
+        .price {
+            transform: scale(1);
+        }
     }
 
     .imgContainer {

@@ -1,18 +1,21 @@
 import React from 'react';
 import styles from './Card.module.scss';
+import BookmarkSvg from '../bookmark-svg-icon/BookmarkSvg';
 
 export default function Card(props) {
 
-    const { srcImage, altImage, priceItem, nameItem } = props;
+    const { srcImage, altImage, priceItem, nameItem, price } = props;
 
     console.log(priceItem);
 
     return (
         <div className={styles.card}>
 
-            {/* <div className={styles.bookmarkContainer}>
-                <img src='./icons/bookmark.svg' alt="" />
-            </div> */}
+            <BookmarkSvg colorSvg="white" widthSvg="24" widthSvg="24" />
+
+            {price &&
+                <p className={styles.price}>{price}€</p>
+            }
 
             {
                 srcImage ?

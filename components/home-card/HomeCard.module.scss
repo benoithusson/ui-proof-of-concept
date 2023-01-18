@@ -27,8 +27,8 @@
         padding-bottom: 30px;
     }
 
+    // Refactoring : Used several time in the code (on HeroCard and HomeCard)
     .price {
-        // TODO : component
         position: absolute;
         display: flex;
         align-items: center;
@@ -60,6 +60,7 @@
             transform: translateY(0);
         }
 
+        // Refactoring : Used several time in the code (on HeroCard and HomeCard)
         .price {
             transform: scale(1);
         }

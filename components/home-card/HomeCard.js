@@ -7,6 +7,7 @@ export default function HomeCard(props) {
 
     return (
         <div className={styles.homeCard}>
+            {/* Refactoring : Used several time in the code (on HeroCard and HomeCard) */}
             {price &&
                 <p className={styles.price}>{price}€</p>
             }
