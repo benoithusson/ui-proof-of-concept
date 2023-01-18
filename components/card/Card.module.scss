@@ -23,21 +23,21 @@
         width: 100%;
         font-weight: 100;
         opacity: 0;
+        // variable
+        font-size: 18px;
         transform: translateY(20px);
         transition: all 0.7s ease;
 
         .nameItem {
             display: flex;
             align-items: center;
-            padding: 0 0;
         }
 
         .price {
             width: 100%;
             text-align: left;
             color: inherit;
-            font-family: 'Concert One', cursive;
-            letter-spacing: 1px;
+            font-family: 'Palanquin', sans-serif;
         }
     }
 
