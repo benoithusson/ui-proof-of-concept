@@ -3,20 +3,23 @@ import styles from './HomeCard.module.scss';
 
 export default function HomeCard(props) {
 
-    const { srcImage, altImage, price, nameItem } = props;
+    const { srcImage, altImage, nameItem, price } = props;
 
     return (
         <div className={styles.homeCard}>
-            {/* Refactoring : Used several time in the code (on HeroCard and HomeCard) */}
-            {price &&
-                <p className={styles.price}>{price}€</p>
-            }
-            {srcImage &&
-                // TODO : Refactoring using </Image>
+            { srcImage &&
+                // Refactoring: use </Image>
                 <img src={srcImage} width="250" alt={altImage} />
             }
-            {nameItem &&
-                <p className={styles.nameItem}>{nameItem}</p>
+
+            {/* Component ? use also into Card */}
+            { nameItem &&
+                <div className={styles.infoContainer}>
+                    <span className={styles.nameItem}>{nameItem}</span>
+                    {price &&
+                        <span className={styles.price}>€ {price}</span>
+                    }
+                </div>
             }
         </div>
     )

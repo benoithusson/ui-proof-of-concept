@@ -17,7 +17,7 @@
 }
 
 .section {
-    position: absolute;
+    position: fixed;
     right: 5%;
     top: 0;
     display: flex;
@@ -26,5 +26,4 @@
     width: 40%;
     height: 100vh;
     z-index: 0;
-    background-color: green;
 }

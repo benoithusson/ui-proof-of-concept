@@ -16,18 +16,17 @@ export default function Card(props) {
         >
             <BookmarkSvg colorSvg="white" widthSvg="24" widthSvg="24" bookmarkIsDisplayed={stateBookmark} />
 
-            {
-                srcImage ?
-                    <div className={styles.imgContainer}>
-                        {/* Refactoring: using </Image> */}
-                        <img src={srcImage} width="300" alt={altImage} />
-                    </div>
-                    :
-                    <div>No image available</div>
+            { srcImage ?
+                <div className={styles.imgContainer}>
+                    {/* Refactoring: use </Image> fron NextJS */}
+                    <img src={srcImage} width="300" alt={altImage} />
+                </div>
+                :
+                <div>No image available</div>
             }
 
-            {
-                nameItem &&
+            {/* Component ? use also into HomeCard */}
+            { nameItem &&
                 <div className={styles.infoContainer}>
                     <span className={styles.nameItem}>{nameItem}</span>
                     {price &&
