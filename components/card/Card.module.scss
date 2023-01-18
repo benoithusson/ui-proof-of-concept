@@ -1,66 +1,51 @@
-
 .card {
     width: 100%;
     cursor: pointer;
     position: relative;
     padding: 100px 0;
 
-    .firstContainer {
-        display: flex;
-
-        .imgContainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 1;
-            width: 25%;
-            min-height: 200px;
-        }
+    .bookmarkContainer {
+        // width: 10%;
+        // padding: 20px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // background-color: white;
     }
 
-    .secondContainer {
+    .imgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .infoContainer {
         position: absolute;
         left: 0;
         bottom: 0;
+        display: flex;
+        justify-content: center;
         padding: 20px;
         width: 100%;
+        font-weight: 100;
+        transform: translateY(20px);
+        transition: all 0.7s ease;
+        opacity: 0;
 
-        .infoItemContainer {
+        .nameItem {
             display: flex;
-            justify-content: center;
-            font-weight: 100;
-            transform: translateY(20px);
-            transition: all 0.7s ease;
-            opacity: 0;
-
-            .nameItem {
-                display: flex;
-                align-items: center;
-                padding: 0 10px;
-            }
-
-            // .price {
-            //     // background-color: salmon;
-            //     padding: 0 10px;
-            //     font-weight: 500;
-            //     font-size: 20px;
-            // }
-
-            .addToFavoritesCta {
-                border: none;
-                background-color: transparent;
-                padding: 0 20px;
-
-                .bookmarkSvg {
-                    fill: red;
-                }
-
-            }
+            align-items: center;
+            padding: 0 10px;
         }
     }
 
     &:hover {
-        .infoItemContainer {
+        .infoContainer {
             transform: translateY(0);
             opacity: 1;
             transition: all 0.7s ease;

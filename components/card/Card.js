@@ -3,30 +3,33 @@ import styles from './Card.module.scss';
 
 export default function Card(props) {
 
-    const { srcImage, altImage, price, nameItem, availableSizes } = props;
+    const { srcImage, altImage, priceItem, nameItem } = props;
+
+    console.log(priceItem);
 
     return (
         <div className={styles.card}>
-            { srcImage &&
-                <div className={styles.firstContainer}>
+
+            {/* <div className={styles.bookmarkContainer}>
+                <img src='./icons/bookmark.svg' alt="" />
+            </div> */}
+
+            {
+                srcImage ?
                     <div className={styles.imgContainer}>
-                        {/* TODO : Refactoring using </Image> */}
+                        {/* Refactoring: using </Image> */}
                         <img src={srcImage} width="300" alt={altImage} />
                     </div>
-                </div>
+                    :
+                    <div>No image available</div>
             }
 
-            { nameItem &&
-                <div className={styles.secondContainer}>
-                    <div className={styles.infoItemContainer}>
-                        <span className={styles.nameItem}>{nameItem}</span>
-                        {/* <span className={styles.price}>€ {price}</span> */}
-                        <button className={styles.addToFavoritesCta}>
-                            <img src="icons/bookmark.svg" width="20" height="20" alt="" class={styles.bookmarkSvg} />
-                        </button>
-                    </div>
+            {
+                nameItem &&
+                <div className={styles.infoContainer}>
+                    <span className={styles.nameItem}>{nameItem}</span>
                 </div>
             }
-        </div>
+        </div >
     )
 }
