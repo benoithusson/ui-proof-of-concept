@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './HeroCard.module.scss';
+import BookmarkSvg from '../bookmark-svg-icon/BookmarkSvg';
 
 export default function HeroCard(props) {
 
     const { srcImage, altImage, price, nameItem } = props;
 
+    const [stateBookmark, setStateBookmark] = useState(false);
+
     return (
-        <div className={styles.heroCard}>
+        <div
+            className={styles.heroCard}
+            onMouseEnter={() => setStateBookmark(true)}
+            onMouseLeave={() => setStateBookmark(false)}
+        >
+
+            <BookmarkSvg colorSvg="white" widthSvg="24" heightSvg="24" bookmarkIsDisplayed={stateBookmark} />
+
             {srcImage &&
                 <img src={srcImage} width="900" alt={altImage} />
             }

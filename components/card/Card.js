@@ -14,7 +14,7 @@ export default function Card(props) {
             onMouseEnter={() => setStateBookmark(true)}
             onMouseLeave={() => setStateBookmark(false)}
         >
-            <BookmarkSvg colorSvg="white" widthSvg="24" widthSvg="24" bookmarkIsDisplayed={stateBookmark} />
+            <BookmarkSvg colorSvg="white" widthSvg="24" heightSvg="24" bookmarkIsDisplayed={stateBookmark} />
 
             {/* Component ? use also into HomeCard */}
             {srcImage ?
