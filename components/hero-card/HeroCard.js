@@ -10,11 +10,13 @@ export default function HeroCard(props) {
             {srcImage &&
                 <img src={srcImage} width="900" alt={altImage} />
             }
-            {nameItem &&
-                <p className={styles.nameItem}>{nameItem}</p>
-            }
-            {price &&
-                <p className={styles.price}>{price}€</p>
+            { nameItem &&
+                <div className={styles.infoContainer}>
+                    <span className={styles.nameItem}>{nameItem}</span>
+                    {price &&
+                        <span className={styles.price}>€ {price}</span>
+                    }
+                </div>
             }
         </div>
     )

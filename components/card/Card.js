@@ -16,17 +16,18 @@ export default function Card(props) {
         >
             <BookmarkSvg colorSvg="white" widthSvg="24" widthSvg="24" bookmarkIsDisplayed={stateBookmark} />
 
-            { srcImage ?
+            {/* Component ? use also into HomeCard */}
+            {srcImage ?
                 <div className={styles.imgContainer}>
-                    {/* Refactoring: use </Image> fron NextJS */}
+                    {/* Refactoring: use </Image> from NextJS */}
                     <img src={srcImage} width="300" alt={altImage} />
                 </div>
                 :
                 <div>No image available</div>
             }
 
-            {/* Component ? use also into HomeCard */}
-            { nameItem &&
+            {/* Component ? use also into HomeCard & HeroCard */}
+            {nameItem &&
                 <div className={styles.infoContainer}>
                     <span className={styles.nameItem}>{nameItem}</span>
                     {price &&
@@ -34,6 +35,6 @@ export default function Card(props) {
                     }
                 </div>
             }
-        </div >
+        </div>
     )
 }

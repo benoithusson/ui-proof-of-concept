@@ -23,7 +23,7 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    padding: 15px 0 15px 40px;
+    padding: 0 0 20px 40px;
     width: 100%;
     font-weight: 100;
     opacity: 0;
@@ -39,6 +39,8 @@
 
     .price {
         width: 100%;
+        // variable
+        font-size: 15px;
         text-align: left;
         color: inherit;
         font-family: 'Palanquin', sans-serif;

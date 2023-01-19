@@ -1,11 +1,11 @@
 .heroCard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(207, 235, 152);
-    position: relative;
 
     img {
         scale: 1;
@@ -14,56 +14,42 @@
         transition: scale 0.7s ease;
     }
 
-    .nameItem, .price {
-        font-weight: 300;
-        position: absolute;
-        // font-family: 'Concert One', cursive;
+    &:hover {
+        .infoContainer {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.7s ease;
+        }
     }
+}
+
+.infoContainer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0 50px 40px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease;
 
     .nameItem {
-        bottom: 100px;
-        right: 100px;
-        opacity: 0;
-        transform: translateY(15px);
-        transition: all 0.7s ease;
+        width: 100%;
         color: rgb(88, 97, 69);
+        text-align: left;
     }
 
     .price {
-        top: 60px;
-        left: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        transform: scale(0);
-        transform-origin: center;
-        color: white;
+        width: 100%;
+        // variable
+        font-size: 15px;
+        text-align: left;
+        font-family: 'Palanquin', 'Helvetica', sans-serif;
+        color: inherit;
         font-weight: 100;
-        background-color: rgba(66, 61, 61, 0.178);
-        font-family: 'Concert One', cursive;
-        transition: all 0.5s cubic-bezier(.57,1.74,.61,.8);
-
     }
-
-    &:hover {
-
-        cursor: pointer;
-
-        img {
-            scale: 1.025;
-        }
-
-        .price {
-            transform: scale(1);
-        }
-
-        .nameItem {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
 }

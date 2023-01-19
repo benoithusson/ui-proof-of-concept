@@ -1,8 +1,9 @@
-.sneakersPageContainer {
+.sneakersPageItems {
     display: flex;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 30%);
     grid-auto-rows: 380px;
     gap: 1px;
+    width: 100%;
 }

@@ -9,18 +9,20 @@ export default function Sneakers(props) {
         <div className={styles.sneakersPageContainer}>
             <NavBar />
             <Header />
-            {props.arrayItems.map((item, index) => {
-                return (
-                    <Card
-                        srcImage={item.srcImage}
-                        altImage={item.altImage}
-                        price={item.price}
-                        nameItem={item.name}
-                        availableSizes={item.availableSizes}
-                        key={index}
-                    />
-                )
-            })}
+            <div className={styles.sneakersPageItems}>
+                {props.arrayItems.map((item, index) => {
+                    return (
+                        <Card
+                            srcImage={item.srcImage}
+                            altImage={item.altImage}
+                            price={item.price}
+                            nameItem={item.name}
+                            availableSizes={item.availableSizes}
+                            key={index}
+                        />
+                    )
+                })}
+            </div>
         </div>
     )
 }
