@@ -17,6 +17,7 @@ export default function Sneakers(props) {
                             altImage={item.altImage}
                             priceItem={item.price}
                             nameItem={item.name}
+                            slugItem={item.slug}
                             key={index}
                         />
                     )
