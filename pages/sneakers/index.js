@@ -15,9 +15,8 @@ export default function Sneakers(props) {
                         <Card
                             srcImage={item.srcImage}
                             altImage={item.altImage}
-                            price={item.price}
+                            priceItem={item.price}
                             nameItem={item.name}
-                            availableSizes={item.availableSizes}
                             key={index}
                         />
                     )

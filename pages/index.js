@@ -20,7 +20,7 @@ export default function Home(props) {
             <HomeCard
               srcImage={item.srcImage}
               altImage={item.altImage}
-              price={item.price}
+              priceItem={item.price}
               nameItem={item.name}
               key={index}
             />
