@@ -15,7 +15,11 @@ export default function HeroCard(props) {
             onMouseLeave={() => setStateBookmark(false)}
         >
 
-            <BookmarkSvg colorSvg="white" widthSvg="24" heightSvg="24" bookmarkIsDisplayed={stateBookmark} />
+            <BookmarkSvg
+                bookmarkWidth="24"
+                bookmarkHeight="24"
+                bookmarkIsDisplayed={stateBookmark}
+            />
 
             {srcImage &&
                 <img src={srcImage} width="900" alt={altImage} />

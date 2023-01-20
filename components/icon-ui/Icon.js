@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 export default function Icon(props) {
 
-    console.log(props);
-
     const { srcImage, widthImage, heightImage, altImage } = props;
 
     const width = widthImage ? widthImage : 20;

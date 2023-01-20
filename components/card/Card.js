@@ -22,9 +22,12 @@ export default function Card(props) {
             onMouseEnter={() => handleAnimationHomeCard(true)}
             onMouseLeave={() => handleAnimationHomeCard(false)}
         >
+            <BookmarkSvg
+                bookmarkWidth="24"
+                bookmarkHeight="24"
+                bookmarkIsDisplayed={stateBookmark}
+            />
             <Link href={`/sneakers/${slugItem}`}>
-                <BookmarkSvg colorSvg="white" widthSvg="24" heightSvg="24" bookmarkIsDisplayed={stateBookmark} />
-
                 {srcImage ?
                     <div className={styles.imgContainer}>
                         {/* Refactoring: use </Image> from NextJS */}
@@ -33,9 +36,12 @@ export default function Card(props) {
                     :
                     <div>No image available</div>
                 }
-
                 {(nameItem || priceItem) &&
-                    <InfoItem name={nameItem} price={priceItem} InfoItemAreDisplayed={stateInfoItem} />
+                    <InfoItem
+                        name={nameItem}
+                        price={priceItem}
+                        InfoItemAreDisplayed={stateInfoItem}
+                    />
                 }
             </Link>
         </div>

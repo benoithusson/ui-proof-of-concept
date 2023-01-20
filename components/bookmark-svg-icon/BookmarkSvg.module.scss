@@ -1,6 +1,5 @@
 
-// Refactoring : Used several time in the code (on HeroCard and HomeCard)
-.bookmark {
+.bookmarkContainer {
     top: 0;
     right: 0;
     position: absolute;
@@ -16,7 +15,16 @@
     transition: all 0.5s cubic-bezier(.57,1.74,.61,.8);
 }
 
-.bookmarkDisplayed {
+.bookmark {
+    fill: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.itemIsAddedToFavorite {
+    fill: red;
+}
+
+.bookmarkIsDisplayed {
     opacity: 1;
     transform: scale(1);
 }
