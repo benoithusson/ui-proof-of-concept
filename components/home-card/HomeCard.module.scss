@@ -7,52 +7,11 @@
     width: calc(100%/2);
     height: calc(100%/3);
     transform-origin: center;
+    cursor: pointer;
     transition: all 0.7s ease;
 
     img {
         transform: translateY(0);
-        transition: all 0.7s ease;
-    }
-}
-
-// Refactoring : Used several time in the code (on HeroCard and HomeCard)
-.infoContainer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 0 0 20px 40px;
-    width: 100%;
-    font-weight: 100;
-    opacity: 0;
-    // variable
-    font-size: 18px;
-    transform: translateY(20px);
-    transition: all 0.7s ease;
-
-    .nameItem {
-        display: flex;
-        align-items: center;
-    }
-
-    .price {
-        width: 100%;
-        // variable
-        font-size: 15px;
-        text-align: left;
-        color: inherit;
-        font-family: 'Palanquin', sans-serif;
-    }
-}
-
-.homeCard:hover {
-    cursor: pointer;
-
-    .infoContainer {
-        transform: translateY(0);
-        opacity: 1;
         transition: all 0.7s ease;
     }
 }

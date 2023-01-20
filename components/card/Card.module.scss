@@ -3,14 +3,6 @@
     padding: 100px 0;
     width: 100%;
     cursor: pointer;
-
-    &:hover {
-        .infoContainer {
-            transform: translateY(0);
-            opacity: 1;
-            transition: all 0.7s ease;
-        }
-    }
 }
 
 .imgContainer {
@@ -19,46 +11,6 @@
     align-items: center;
     width: 100%;
     min-height: 200px;
-}
-
-.infoContainer {
-    position: absolute;
-    left: 0;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 10px 0 0 40px;
-    width: 100%;
-    font-weight: 100;
-    opacity: 0;
-    // variable
-    font-size: 18px;
-    transform: translateY(20px);
-    transition: all 0.7s ease;
-
-    .nameItem {
-        display: flex;
-        align-items: center;
-    }
-
-    .price {
-        width: 100%;
-        font-weight: 100;
-        text-align: left;
-        // variable
-        font-size: 15px;
-        color: inherit;
-        font-family: 'Palanquin', 'Helvetica', sans-serif;
-    }
-}
-
-// .card:nth-child(3n + 1) --> first column
-.card:nth-child(3n + 1):nth-last-child(-n + 3),
-.card:nth-child(3n + 2):nth-last-child(-n + 3),
-.card:nth-child(3n + 3):nth-last-child(-n + 3) {
-    .infoContainer {
-        padding-top: 10px;
-    }
 }
 
 .card:nth-child(3n) {

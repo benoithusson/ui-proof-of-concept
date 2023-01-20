@@ -1,0 +1,45 @@
+.infoContainerHomeCard,
+.infoContainerCard {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 0 0 40px;
+    width: 100%;
+    font-weight: 100;
+    opacity: 0;
+    // variable
+    font-size: 18px;
+    transform: translateY(20px);
+    transition: all 0.7s ease;
+}
+
+// To put infoContainerHomeCard at the very bottom of the card
+// infoContainerCard has not bottom 0 and no padding bottom
+// because it makes a blank space at the last row of the grid
+.infoContainerHomeCard {
+    bottom: 10px;
+    padding: 0 0 20px 40px;
+}
+
+.nameItem {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    width: 100%;
+    font-weight: 100;
+    text-align: left;
+    // variable
+    font-size: 15px;
+    color: inherit;
+    font-family: 'Palanquin', 'Helvetica', sans-serif;
+}
+
+.displayInfo {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.7s ease;
+}
