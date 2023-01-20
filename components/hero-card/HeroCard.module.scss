@@ -16,6 +16,10 @@
 
     &:hover {
 
+        img {
+            scale: 1.03;
+        }
+
         cursor: pointer;
 
         .infoContainer {
