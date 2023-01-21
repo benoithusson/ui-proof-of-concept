@@ -7,16 +7,14 @@ export default function SocialIcon(props) {
 
     const { srcImage, widthImage, heightImage, altImage } = props;
 
-    const width = widthImage ? widthImage : 20;
-    const height = heightImage ? heightImage : 20;
+    const width = widthImage ? widthImage : 24;
+    const height = heightImage ? heightImage : 24;
     const alt = altImage ? altImage : 'Social icon';
 
     return (
-        <>
-            <div className={styles.socialIcon}>
-                <Image src={`/icons/${srcImage}`} width={width} height={height} alt={alt} />
-            </div>
-        </>
+        <div className={styles.socialIcon}>
+            <Image src={`/icons/${srcImage}`} width={width} height={height} alt={alt} />
+        </div>
     )
 }
 

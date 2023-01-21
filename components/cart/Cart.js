@@ -9,14 +9,14 @@ export default function Cart() {
 
     return (
         <header className={header} onClick={() => setDisplayHeader(!displayHeader)}>
-            <BookmarkSvg
-                bookmarkWidth="24"
-                bookmarkHeight="24"
-            />
             <div className={styles.headerNav}>
-                <img src="icons/cart.svg" width="20" height="20" />
-            </div>
-            <div styke={{ backgroundColor: 'red' }}>
+                <BookmarkSvg
+                    bookmarkWidth="24"
+                    bookmarkHeight="24"
+                />
+                <div className={styles.cartSvgContainer}>
+                    <img src="icons/cart.svg" width="20" height="20" />
+                </div>
             </div>
         </header>
     )
