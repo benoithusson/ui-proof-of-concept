@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import styles from './BookmarkSvg.module.scss'
+import styles from './BookmarkItemSvg.module.scss'
 
-export default function BookmarkSvg(props) {
+export default function BookmarkItemSvg(props) {
 
     const { bookmarkWidth, bookmarkHeight, bookmarkIsDisplayed } = props;
 

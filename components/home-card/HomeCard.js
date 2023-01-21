@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './HomeCard.module.scss';
-import BookmarkSvg from '../bookmark-svg-icon/BookmarkSvg';
+import BookmarkItemSvg from '../bookmark-item/BookmarkItemSvg';
 import InfoItem from '../info-item/InfoItem';
 
 export default function HomeCard(props) {
@@ -22,7 +22,7 @@ export default function HomeCard(props) {
             onMouseLeave={() => handleAnimationHomeCard(false)}
         >
 
-            <BookmarkSvg colorSvg="white" widthSvg="24" heightSvg="24" bookmarkIsDisplayed={stateBookmark} />
+            <BookmarkItemSvg bookmarkWidth="20" bookmarkHeight="20" bookmarkIsDisplayed={stateBookmark} />
 
             { srcImage &&
                 // Refactoring: use </Image> from NextJS

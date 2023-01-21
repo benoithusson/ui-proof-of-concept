@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './HeroCard.module.scss';
-import BookmarkSvg from '../bookmark-svg-icon/BookmarkSvg';
+import BookmarkItemSvg from '../bookmark-item/BookmarkItemSvg';
 
 export default function HeroCard(props) {
 
@@ -15,15 +15,17 @@ export default function HeroCard(props) {
             onMouseLeave={() => setStateBookmark(false)}
         >
 
-            <BookmarkSvg
-                bookmarkWidth="24"
-                bookmarkHeight="24"
+            {/* Créer taille standard si pas de probs */}
+            <BookmarkItemSvg
+                bookmarkWidth="20"
+                bookmarkHeight="20"
                 bookmarkIsDisplayed={stateBookmark}
             />
 
             {srcImage &&
                 <img src={srcImage} width="900" alt={altImage} />
             }
+
             { nameItem &&
                 <div className={styles.infoContainer}>
                     <span className={styles.nameItem}>{nameItem}</span>

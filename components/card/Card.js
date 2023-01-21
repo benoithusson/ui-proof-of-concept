@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Card.module.scss';
-import BookmarkSvg from '../bookmark-svg-icon/BookmarkSvg';
+import BookmarkItemSvg from '../bookmark-item/BookmarkItemSvg';
 import InfoItem from '../info-item/InfoItem';
 import Link from 'next/link';
 
@@ -22,11 +22,13 @@ export default function Card(props) {
             onMouseEnter={() => handleAnimationHomeCard(true)}
             onMouseLeave={() => handleAnimationHomeCard(false)}
         >
-            <BookmarkSvg
-                bookmarkWidth="24"
-                bookmarkHeight="24"
+
+            <BookmarkItemSvg
+                bookmarkWidth="20"
+                bookmarkHeight="20"
                 bookmarkIsDisplayed={stateBookmark}
             />
+
             <Link href={`/sneakers/${slugItem}`}>
                 {srcImage ?
                     <div className={styles.imgContainer}>
@@ -36,6 +38,7 @@ export default function Card(props) {
                     :
                     <div>No image available</div>
                 }
+
                 {(nameItem || priceItem) &&
                     <InfoItem
                         name={nameItem}
