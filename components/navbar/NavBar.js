@@ -10,7 +10,7 @@ export default function NavBar() {
     const [hideItemsNavBar, setHideItemsNavBar] = useState(false);
 
     const navBar = toggleNavBar ? `${styles.navbar} ${styles.displayNavBar}` : `${styles.navbar}`;
-    const navBarItem = hideItemsNavBar ? `${styles.navbarItem} ${styles.hideItemNavBar}` : `${styles.navbarItem}`;
+    // const navBarItem = hideItemsNavBar ? `${styles.navbarItem} ${styles.hideItemNavBar}` : `${styles.navbarItem}`;
 
     const handleToggleNavBar = () => {
         setToggleNavBar(!toggleNavBar);
@@ -30,16 +30,20 @@ export default function NavBar() {
                 !toggleNavBar && (
                     <>
                         <div className={styles.navBarNav}>
-                            <img src="icons/icon-store.svg" width="60" height="60" alt="" />
-                        </div>
-                        <div className={styles.navBarNav} onClick={() => handleToggleNavBar()}>
-                            <img src="icons/hamburger-icon.svg" width="30" height="30" alt="" />
-                        </div>
-                        <div className={styles.navBarNav}>
-                            <div className={styles.socialIconsContainer}>
-                                <SocialIcons srcImage="/facebook.svg" />
-                                <SocialIcons srcImage="/instagram.svg" />
-                                <SocialIcons srcImage="/twitter.svg" />
+                            <div className={styles.logo}>
+                                <img src="icons/icon-store.svg" width="60" height="60" alt="" />
+                            </div>
+                            <div className={styles.navbarItem}>
+                                <Link href="/">Home</Link>
+                            </div>
+                            <div className={styles.navbarItem}>
+                                <Link href="/sneakers">Sneakers</Link>
+                            </div>
+                            <div className={styles.navbarItem}>
+                                <Link href="/sneakers">Accessories</Link>
+                            </div>
+                            <div className={styles.navbarItem}>
+                                <Link href="/sneakers">Sale</Link>
                             </div>
                         </div>
                     </>
@@ -52,7 +56,7 @@ export default function NavBar() {
                             <div className={styles.closeNavBtn} onClick={(e) => handleHideItems(e)}>
                                 <img src="icons/close-icon.svg" width="60" height="60" alt="" />
                             </div>
-                            <div className={navBarItem}>
+                            <div className={styles.navbarItem}>
                                 <Link href="/">Home</Link>
                             </div>
                             <div className={navBarItem}>

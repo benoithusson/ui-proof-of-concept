@@ -7,15 +7,24 @@
     a {
         color: inherit;
     }
+
+    .imgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 200px;
+        transform: translateY(0);
+        transition: all 0.7s ease;
+    }
+
+    &:hover {
+        .imgContainer {
+            transform: translateY(-7px);
+        }
+    }
 }
 
-.imgContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 200px;
-}
 
 .card:nth-child(3n) {
     background-color: rgb(255, 217, 218);

@@ -1,14 +1,14 @@
 import React from 'react';
 import Card from '../../components/card/Card';
 import NavBar from '../../components/navbar/NavBar';
-import Header from '../../components/cart/Cart';
 import styles from '../../styles/SneakersPage.module.scss';
+// import Cart from '../components/cart/Cart';
 
 export default function Sneakers(props) {
     return (
         <div className={styles.sneakersPageContainer}>
             <NavBar />
-            <Header />
+            {/* <Cart /> */}
             <div className={styles.sneakersPageItems}>
                 {props.arrayItems.map((item, index) => {
                     return (

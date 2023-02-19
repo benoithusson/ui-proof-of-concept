@@ -3,14 +3,14 @@ import styles from '../styles/Home.module.scss';
 import HomeCard from '../components/home-card/HomeCard';
 import HeroCard from '../components/hero-card/HeroCard';
 import NavBar from '../components/navbar/NavBar';
-import Header from '../components/cart/Cart';
+// import Cart from '../components/cart/Cart';
 
 export default function Home(props) {
 
   return (
     <div className={styles.container}>
       <NavBar />
-      <Header />
+      {/* <Cart /> */}
       <section className={styles.heroSection}>
         <HeroCard srcImage="/hero-shoes.png" altImage="new shoes nike air force one" price="150" nameItem="Nike Air Force one" />
       </section>

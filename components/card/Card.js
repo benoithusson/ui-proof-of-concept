@@ -17,8 +17,8 @@ export default function Card(props) {
         setStateInfoItemContainer(state);
     }
 
-    const { addToFavorite } = useContext(BookmarkContext);
-    console.log(addToFavorite);
+    // const { addToFavorite } = useContext(BookmarkContext);
+    // console.log(addToFavorite);
 
     return (
         <div
