@@ -1,3 +1,3 @@
 import React from 'react';
 
-export const BookmarkContext = React.createContext(false);
+// export const BookmarkContext = React.createContext(false);

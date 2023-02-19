@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import BookmarkContext from '../../pages/context/bookmarkContext';
+// import BookmarkContext from '../../pages/context/bookmarkContext';
 import styles from './Card.module.scss';
 import BookmarkItemSvg from '../bookmark-item/BookmarkItemSvg';
 import InfoItem from '../info-item/InfoItem';
